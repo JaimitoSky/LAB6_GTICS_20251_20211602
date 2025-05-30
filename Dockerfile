@@ -4,11 +4,10 @@ FROM openjdk:17-slim
 # Directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia el archivo JAR al contenedor (ajusta el nombre según tu JAR final)
-COPY target/LAB6_GTICS_20251_20211602-0.0.1-SNAPSHOT.jar app.jar
+COPY target/gtics_lab_6-0.0.1-SNAPSHOT.jar app.jar
 
-# Expone el puerto 8080
+# Expone el puerto donde corre la app
 EXPOSE 8080
 
-# Comando para ejecutar tu aplicación
+# Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
